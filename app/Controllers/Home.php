@@ -1629,6 +1629,7 @@ public function addTeacher()
 		if ($response->getStatusCode() == 200) {
 			return redirect()->to('/classlist')->with('success', $result['message'] ?? json_encode($result));
 		} else {
+			//return redirect()->back()->with('error', $result['message'] ?? json_encode($result));
 			return redirect()->back()->with('error', $result['message'] ?? json_encode($result));
 		}
 
